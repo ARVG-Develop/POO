@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Exercicio04-Pagamentos/1.0.0": {
+        "runtime": {
+          "Exercicio04-Pagamentos.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exercicio04-Pagamentos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

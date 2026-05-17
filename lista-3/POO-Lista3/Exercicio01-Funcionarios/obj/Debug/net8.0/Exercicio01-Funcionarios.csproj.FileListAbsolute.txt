@@ -1,0 +1,15 @@
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/bin/Debug/net8.0/Exercicio01-Funcionarios
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/bin/Debug/net8.0/Exercicio01-Funcionarios.deps.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/bin/Debug/net8.0/Exercicio01-Funcionarios.runtimeconfig.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/bin/Debug/net8.0/Exercicio01-Funcionarios.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/bin/Debug/net8.0/Exercicio01-Funcionarios.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.GeneratedMSBuildEditorConfig.editorconfig
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.AssemblyInfoInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.AssemblyInfo.cs
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.csproj.CoreCompileInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.sourcelink.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/refint/Exercicio01-Funcionarios.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/Exercicio01-Funcionarios.genruntimeconfig.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio01-Funcionarios/obj/Debug/net8.0/ref/Exercicio01-Funcionarios.dll

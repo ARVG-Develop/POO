@@ -1,0 +1,15 @@
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/bin/Debug/net8.0/Exercicio04-Pagamentos
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/bin/Debug/net8.0/Exercicio04-Pagamentos.deps.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/bin/Debug/net8.0/Exercicio04-Pagamentos.runtimeconfig.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/bin/Debug/net8.0/Exercicio04-Pagamentos.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/bin/Debug/net8.0/Exercicio04-Pagamentos.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.GeneratedMSBuildEditorConfig.editorconfig
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.AssemblyInfoInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.AssemblyInfo.cs
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.csproj.CoreCompileInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.sourcelink.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/refint/Exercicio04-Pagamentos.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/Exercicio04-Pagamentos.genruntimeconfig.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio04-Pagamentos/obj/Debug/net8.0/ref/Exercicio04-Pagamentos.dll

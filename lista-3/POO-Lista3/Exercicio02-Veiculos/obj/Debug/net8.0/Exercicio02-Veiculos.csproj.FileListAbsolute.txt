@@ -1,0 +1,15 @@
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/bin/Debug/net8.0/Exercicio02-Veiculos
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/bin/Debug/net8.0/Exercicio02-Veiculos.deps.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/bin/Debug/net8.0/Exercicio02-Veiculos.runtimeconfig.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/bin/Debug/net8.0/Exercicio02-Veiculos.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/bin/Debug/net8.0/Exercicio02-Veiculos.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.GeneratedMSBuildEditorConfig.editorconfig
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.AssemblyInfoInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.AssemblyInfo.cs
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.csproj.CoreCompileInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.sourcelink.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/refint/Exercicio02-Veiculos.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/Exercicio02-Veiculos.genruntimeconfig.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/Debug/net8.0/ref/Exercicio02-Veiculos.dll

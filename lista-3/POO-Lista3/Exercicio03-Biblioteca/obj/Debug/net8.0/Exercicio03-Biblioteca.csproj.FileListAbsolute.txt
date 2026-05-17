@@ -1,0 +1,15 @@
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/bin/Debug/net8.0/Exercicio03-Biblioteca
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/bin/Debug/net8.0/Exercicio03-Biblioteca.deps.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/bin/Debug/net8.0/Exercicio03-Biblioteca.runtimeconfig.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/bin/Debug/net8.0/Exercicio03-Biblioteca.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/bin/Debug/net8.0/Exercicio03-Biblioteca.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.AssemblyInfoInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.AssemblyInfo.cs
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.csproj.CoreCompileInputs.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.sourcelink.json
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/refint/Exercicio03-Biblioteca.dll
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.pdb
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/Exercicio03-Biblioteca.genruntimeconfig.cache
+/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio03-Biblioteca/obj/Debug/net8.0/ref/Exercicio03-Biblioteca.dll
