@@ -1,0 +1,323 @@
+================================================================================
+                        EXERCÍCIO 01 - FUNCIONÁRIOS
+                        POO-Lista3 / Exercicio01-Funcionarios
+================================================================================
+
+-------------------- Arquivo: Interfaces/IBonificacao.cs --------------------
+
+namespace Exercicio01_Funcionarios;
+
+interface IBonificacao
+{
+    double CalcularBonus();
+}
+
+
+-------------------- Arquivo: Models/Funcionario.cs --------------------
+
+namespace Exercicio01_Funcionarios;
+
+abstract class Funcionario
+{
+    public string Nome { get; set; }
+    public double SalarioBase { get; set; }
+
+    public Funcionario(string nome, double salarioBase)
+    {
+        Nome = nome;
+        SalarioBase = salarioBase;
+    }
+
+    public abstract double CalcularSalario();
+}
+
+
+-------------------- Arquivo: Models/Gerente.cs --------------------
+
+namespace Exercicio01_Funcionarios;
+
+class Gerente : Funcionario, IBonificacao
+{
+    public Gerente(string nome, double salarioBase) : base(nome, salarioBase)
+    {
+    }
+
+    public override double CalcularSalario()
+    {
+        Console.WriteLine("Estou no método CalcularSalario() da classe Gerente");
+        return SalarioBase + CalcularBonus();
+    }
+
+    public double CalcularBonus()
+    {
+        Console.WriteLine("Estou no método CalcularBonus() da classe Gerente");
+        return SalarioBase * 0.30;
+    }
+}
+
+
+-------------------- Arquivo: Models/Desenvolvedor.cs --------------------
+
+namespace Exercicio01_Funcionarios;
+
+class Desenvolvedor : Funcionario, IBonificacao
+{
+    public Desenvolvedor(string nome, double salarioBase) : base(nome, salarioBase)
+    {
+    }
+
+    public override double CalcularSalario()
+    {
+        Console.WriteLine("Estou no método CalcularSalario() da classe Desenvolvedor");
+        return SalarioBase + CalcularBonus();
+    }
+
+    public double CalcularBonus()
+    {
+        Console.WriteLine("Estou no método CalcularBonus() da classe Desenvolvedor");
+        return SalarioBase * 0.20;
+    }
+}
+
+
+-------------------- Arquivo: Program.cs --------------------
+
+namespace Exercicio01_Funcionarios;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Gerente g1 = new Gerente("Carlos Silva", 5000.00);
+        Gerente g2 = new Gerente("Ana Souza", 6000.00);
+        Desenvolvedor d1 = new Desenvolvedor("João Lima", 4000.00);
+        Desenvolvedor d2 = new Desenvolvedor("Maria Oliveira", 4500.00);
+
+        List<Funcionario> funcionarios = new List<Funcionario>();
+
+        funcionarios.Add(g1);
+        funcionarios.Add(g2);
+        funcionarios.Add(d1);
+        funcionarios.Add(d2);
+
+        Console.WriteLine("      RELATÓRIO DE FUNCIONÁRIOS         \n");
+
+        foreach (Funcionario f in funcionarios)
+        {
+            Console.WriteLine($"--- Funcionário: {f.Nome} ---");
+
+            double salario = f.CalcularSalario();
+
+            IBonificacao bonificado = (IBonificacao)f;
+            double bonus = bonificado.CalcularBonus();
+
+            Console.WriteLine($"Nome:          {f.Nome}");
+            Console.WriteLine($"Salário Final: R$ {salario:F2}");
+            Console.WriteLine($"Bônus:         R$ {bonus:F2}");
+            Console.WriteLine();
+        }
+    }
+}
+
+
+
+================================================================================
+                        EXERCÍCIO 02 - VEÍCULOS
+                        POO-Lista3 / Exercicio02-Veiculos
+================================================================================
+
+-------------------- Arquivo: Interfaces/IManutencao.cs --------------------
+
+namespace Exercicio02_Veiculos;
+
+public interface IManutencao
+{
+void RealizarManutencao(Veiculo veiculo);
+}
+
+
+-------------------- Arquivo: Models/Veiculo.cs --------------------
+
+namespace Exercicio02_Veiculos;
+
+public abstract class Veiculo
+{
+    public string Marca { get; set; }
+    public string Modelo { get; set; }
+    public Veiculo(string marca, string modelo)
+    {
+        Marca = marca;
+        Modelo = modelo;
+    }
+    public abstract string ExibirInformacoes();
+}
+
+/*namespace Exercicio01_Funcionarios;
+
+abstract class Funcionario
+{
+    public string Nome { get; set; }
+    public double SalarioBase { get; set; }
+
+    public Funcionario(string nome, double salarioBase)
+    {
+        Nome = nome;
+        SalarioBase = salarioBase;
+    }
+
+    public abstract double CalcularSalario();
+}*/
+
+
+-------------------- Arquivo: Models/Carro.cs --------------------
+
+namespace Exercicio02_Veiculos;
+
+public class Carro : Veiculo
+{
+    public Carro(string marca, string modelo) : base(marca, modelo)
+    {
+    }
+    public override string ExibirInformacoes()
+    {
+        return $"Carro - Marca: {Marca}, Modelo: {Modelo}";
+    }
+}
+
+
+-------------------- Arquivo: Models/Moto.cs --------------------
+
+namespace Exercicio02_Veiculos;
+
+public class Moto : Veiculo
+{
+    public Moto(string marca, string modelo) : base(marca, modelo)
+    {
+    }
+    public override string ExibirInformacoes()
+    {
+        return $"Moto - Marca: {Marca}, Modelo: {Modelo}";
+    }
+}
+
+
+-------------------- Arquivo: Program.cs --------------------
+
+using Exercicio02_Veiculos;
+
+List<Veiculo> veiculos = new()
+{
+    new Carro("Toyota", "Corolla"),
+    new Carro("Honda", "Civic"),
+    new Moto("Yamaha", "MT-07"),
+    new Moto("Honda", "CB 500")
+};
+
+foreach (var v in veiculos)
+{
+    Console.WriteLine(v.ExibirInformacoes());
+}
+
+
+
+================================================================================
+                        EXERCÍCIO 03 - BIBLIOTECA
+                        POO-Lista3 / Exercicio03-Biblioteca
+================================================================================
+
+-------------------- Arquivo: Interfaces/IEmprestimo.cs --------------------
+
+namespace Exercicio03_Biblioteca;
+
+public class IEmprestimo
+{
+
+}
+
+
+-------------------- Arquivo: Models/ItemBiblioteca.cs --------------------
+
+namespace Exercicio03_Biblioteca;
+
+public class ItemBiblioteca
+{
+
+}
+
+
+-------------------- Arquivo: Models/Livro.cs --------------------
+
+namespace Exercicio03_Biblioteca;
+
+public class Livro
+{
+
+}
+
+
+-------------------- Arquivo: Models/Revista.cs --------------------
+
+namespace Exercicio03_Biblioteca;
+
+public class Revista
+{
+
+}
+
+
+-------------------- Arquivo: Program.cs --------------------
+
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+
+
+
+================================================================================
+                        EXERCÍCIO 04 - PAGAMENTOS
+                        POO-Lista3 / Exercicio04-Pagamentos
+================================================================================
+
+-------------------- Arquivo: Interfaces/IComprovante.cs --------------------
+
+namespace Exercicio04_Pagamentos;
+
+public class IComprovante
+{
+
+}
+
+
+-------------------- Arquivo: Models/Pagamento.cs --------------------
+
+namespace Exercicio04_Pagamentos;
+
+public class Pagamento
+{
+
+}
+
+
+-------------------- Arquivo: Models/Pix.cs --------------------
+
+namespace Exercicio04_Pagamentos;
+
+public class Pix
+{
+
+}
+
+
+-------------------- Arquivo: Models/CartaoCredito.cs --------------------
+
+namespace Exercicio04_Pagamentos;
+
+public class CartaoCredito
+{
+
+}
+
+
+-------------------- Arquivo: Program.cs --------------------
+
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");

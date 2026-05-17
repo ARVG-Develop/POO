@@ -1,6 +1,6 @@
 ﻿namespace Exercicio02_Veiculos;
 
-public class IManutencao
+public interface IManutencao
 {
-
+void RealizarManutencao(Veiculo veiculo);
 }
