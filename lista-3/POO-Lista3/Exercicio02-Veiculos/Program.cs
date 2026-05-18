@@ -11,4 +11,11 @@ List<Veiculo> veiculos = new()
 foreach (var v in veiculos)
 {
     Console.WriteLine(v.ExibirInformacoes());
+
+    if (v is IManutencao manutencao)
+    {
+        manutencao.RealizarManutencao();
+    }
+
+    Console.WriteLine();
 }

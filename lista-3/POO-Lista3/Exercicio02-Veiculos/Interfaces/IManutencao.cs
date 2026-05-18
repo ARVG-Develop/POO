@@ -2,5 +2,5 @@
 
 public interface IManutencao
 {
-void RealizarManutencao(Veiculo veiculo);
+    void RealizarManutencao();
 }

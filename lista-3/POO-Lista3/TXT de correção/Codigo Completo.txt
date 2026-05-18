@@ -7,7 +7,7 @@
 
 namespace Exercicio01_Funcionarios;
 
-interface IBonificacao
+public interface IBonificacao
 {
     double CalcularBonus();
 }
@@ -17,7 +17,7 @@ interface IBonificacao
 
 namespace Exercicio01_Funcionarios;
 
-abstract class Funcionario
+public abstract class Funcionario
 {
     public string Nome { get; set; }
     public double SalarioBase { get; set; }
@@ -36,7 +36,7 @@ abstract class Funcionario
 
 namespace Exercicio01_Funcionarios;
 
-class Gerente : Funcionario, IBonificacao
+public class Gerente : Funcionario, IBonificacao
 {
     public Gerente(string nome, double salarioBase) : base(nome, salarioBase)
     {
@@ -44,13 +44,11 @@ class Gerente : Funcionario, IBonificacao
 
     public override double CalcularSalario()
     {
-        Console.WriteLine("Estou no método CalcularSalario() da classe Gerente");
         return SalarioBase + CalcularBonus();
     }
 
     public double CalcularBonus()
     {
-        Console.WriteLine("Estou no método CalcularBonus() da classe Gerente");
         return SalarioBase * 0.30;
     }
 }
@@ -60,7 +58,7 @@ class Gerente : Funcionario, IBonificacao
 
 namespace Exercicio01_Funcionarios;
 
-class Desenvolvedor : Funcionario, IBonificacao
+public class Desenvolvedor : Funcionario, IBonificacao
 {
     public Desenvolvedor(string nome, double salarioBase) : base(nome, salarioBase)
     {
@@ -68,13 +66,11 @@ class Desenvolvedor : Funcionario, IBonificacao
 
     public override double CalcularSalario()
     {
-        Console.WriteLine("Estou no método CalcularSalario() da classe Desenvolvedor");
         return SalarioBase + CalcularBonus();
     }
 
     public double CalcularBonus()
     {
-        Console.WriteLine("Estou no método CalcularBonus() da classe Desenvolvedor");
         return SalarioBase * 0.20;
     }
 }
@@ -82,41 +78,36 @@ class Desenvolvedor : Funcionario, IBonificacao
 
 -------------------- Arquivo: Program.cs --------------------
 
-namespace Exercicio01_Funcionarios;
+using Exercicio01_Funcionarios;
 
-class Program
+Gerente g1 = new Gerente("Carlos Silva", 5000.00);
+Gerente g2 = new Gerente("Ana Souza", 6000.00);
+Desenvolvedor d1 = new Desenvolvedor("João Lima", 4000.00);
+Desenvolvedor d2 = new Desenvolvedor("Maria Oliveira", 4500.00);
+
+List<Funcionario> funcionarios = new List<Funcionario>();
+funcionarios.Add(g1);
+funcionarios.Add(g2);
+funcionarios.Add(d1);
+funcionarios.Add(d2);
+
+Console.WriteLine("      RELATÓRIO DE FUNCIONÁRIOS         \n");
+
+foreach (Funcionario f in funcionarios)
 {
-    static void Main(string[] args)
+    Console.WriteLine($"--- Funcionário: {f.Nome} ---");
+
+    double salario = f.CalcularSalario();
+
+    if (f is IBonificacao bonificado)
     {
-        Gerente g1 = new Gerente("Carlos Silva", 5000.00);
-        Gerente g2 = new Gerente("Ana Souza", 6000.00);
-        Desenvolvedor d1 = new Desenvolvedor("João Lima", 4000.00);
-        Desenvolvedor d2 = new Desenvolvedor("Maria Oliveira", 4500.00);
-
-        List<Funcionario> funcionarios = new List<Funcionario>();
-
-        funcionarios.Add(g1);
-        funcionarios.Add(g2);
-        funcionarios.Add(d1);
-        funcionarios.Add(d2);
-
-        Console.WriteLine("      RELATÓRIO DE FUNCIONÁRIOS         \n");
-
-        foreach (Funcionario f in funcionarios)
-        {
-            Console.WriteLine($"--- Funcionário: {f.Nome} ---");
-
-            double salario = f.CalcularSalario();
-
-            IBonificacao bonificado = (IBonificacao)f;
-            double bonus = bonificado.CalcularBonus();
-
-            Console.WriteLine($"Nome:          {f.Nome}");
-            Console.WriteLine($"Salário Final: R$ {salario:F2}");
-            Console.WriteLine($"Bônus:         R$ {bonus:F2}");
-            Console.WriteLine();
-        }
+        double bonus = bonificado.CalcularBonus();
+        Console.WriteLine($"Nome:          {f.Nome}");
+        Console.WriteLine($"Salário Final: R$ {salario:F2}");
+        Console.WriteLine($"Bônus:         R$ {bonus:F2}");
     }
+
+    Console.WriteLine();
 }
 
 
@@ -132,7 +123,7 @@ namespace Exercicio02_Veiculos;
 
 public interface IManutencao
 {
-void RealizarManutencao(Veiculo veiculo);
+    void RealizarManutencao();
 }
 
 
@@ -144,43 +135,35 @@ public abstract class Veiculo
 {
     public string Marca { get; set; }
     public string Modelo { get; set; }
+
     public Veiculo(string marca, string modelo)
     {
         Marca = marca;
         Modelo = modelo;
     }
+
     public abstract string ExibirInformacoes();
 }
-
-/*namespace Exercicio01_Funcionarios;
-
-abstract class Funcionario
-{
-    public string Nome { get; set; }
-    public double SalarioBase { get; set; }
-
-    public Funcionario(string nome, double salarioBase)
-    {
-        Nome = nome;
-        SalarioBase = salarioBase;
-    }
-
-    public abstract double CalcularSalario();
-}*/
 
 
 -------------------- Arquivo: Models/Carro.cs --------------------
 
 namespace Exercicio02_Veiculos;
 
-public class Carro : Veiculo
+public class Carro : Veiculo, IManutencao
 {
     public Carro(string marca, string modelo) : base(marca, modelo)
     {
     }
+
     public override string ExibirInformacoes()
     {
         return $"Carro - Marca: {Marca}, Modelo: {Modelo}";
+    }
+
+    public void RealizarManutencao()
+    {
+        Console.WriteLine($"Manutenção do carro {Marca} {Modelo} realizada.");
     }
 }
 
@@ -189,14 +172,20 @@ public class Carro : Veiculo
 
 namespace Exercicio02_Veiculos;
 
-public class Moto : Veiculo
+public class Moto : Veiculo, IManutencao
 {
     public Moto(string marca, string modelo) : base(marca, modelo)
     {
     }
+
     public override string ExibirInformacoes()
     {
         return $"Moto - Marca: {Marca}, Modelo: {Modelo}";
+    }
+
+    public void RealizarManutencao()
+    {
+        Console.WriteLine($"Manutenção da moto {Marca} {Modelo} realizada.");
     }
 }
 
@@ -216,6 +205,13 @@ List<Veiculo> veiculos = new()
 foreach (var v in veiculos)
 {
     Console.WriteLine(v.ExibirInformacoes());
+
+    if (v is IManutencao manutencao)
+    {
+        manutencao.RealizarManutencao();
+    }
+
+    Console.WriteLine();
 }
 
 
@@ -229,9 +225,9 @@ foreach (var v in veiculos)
 
 namespace Exercicio03_Biblioteca;
 
-public class IEmprestimo
+public interface IEmprestimo
 {
-
+    void Emprestar();
 }
 
 
@@ -239,9 +235,18 @@ public class IEmprestimo
 
 namespace Exercicio03_Biblioteca;
 
-public class ItemBiblioteca
+public abstract class ItemBiblioteca
 {
+    public string Titulo { get; set; }
+    public int Ano { get; set; }
 
+    public ItemBiblioteca(string titulo, int ano)
+    {
+        Titulo = titulo;
+        Ano = ano;
+    }
+
+    public abstract void ExibirDetalhes();
 }
 
 
@@ -249,9 +254,21 @@ public class ItemBiblioteca
 
 namespace Exercicio03_Biblioteca;
 
-public class Livro
+public class Livro : ItemBiblioteca, IEmprestimo
 {
+    public Livro(string titulo, int ano) : base(titulo, ano)
+    {
+    }
 
+    public override void ExibirDetalhes()
+    {
+        Console.WriteLine($"Livro: {Titulo}, Ano: {Ano}");
+    }
+
+    public void Emprestar()
+    {
+        Console.WriteLine($"O livro \"{Titulo}\" foi emprestado.");
+    }
 }
 
 
@@ -259,16 +276,46 @@ public class Livro
 
 namespace Exercicio03_Biblioteca;
 
-public class Revista
+public class Revista : ItemBiblioteca, IEmprestimo
 {
+    public Revista(string titulo, int ano) : base(titulo, ano)
+    {
+    }
 
+    public override void ExibirDetalhes()
+    {
+        Console.WriteLine($"Revista: {Titulo}, Ano: {Ano}");
+    }
+
+    public void Emprestar()
+    {
+        Console.WriteLine($"A revista \"{Titulo}\" foi emprestada.");
+    }
 }
 
 
 -------------------- Arquivo: Program.cs --------------------
 
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using Exercicio03_Biblioteca;
+
+Livro livro = new Livro("O Senhor dos Anéis", 1954);
+Revista revista = new Revista("Super Interessante", 2023);
+
+List<ItemBiblioteca> acervo = new List<ItemBiblioteca>();
+acervo.Add(livro);
+acervo.Add(revista);
+
+foreach (ItemBiblioteca item in acervo)
+{
+    item.ExibirDetalhes();
+
+    if (item is IEmprestimo emprestavel)
+    {
+        emprestavel.Emprestar();
+    }
+
+    Console.WriteLine();
+}
 
 
 
@@ -281,9 +328,9 @@ Console.WriteLine("Hello, World!");
 
 namespace Exercicio04_Pagamentos;
 
-public class IComprovante
+public interface IComprovante
 {
-
+    void EmitirComprovante();
 }
 
 
@@ -291,19 +338,16 @@ public class IComprovante
 
 namespace Exercicio04_Pagamentos;
 
-public class Pagamento
+public abstract class Pagamento
 {
+    public double Valor { get; set; }
 
-}
+    public Pagamento(double valor)
+    {
+        Valor = valor;
+    }
 
-
--------------------- Arquivo: Models/Pix.cs --------------------
-
-namespace Exercicio04_Pagamentos;
-
-public class Pix
-{
-
+    public abstract void ProcessarPagamento();
 }
 
 
@@ -311,13 +355,65 @@ public class Pix
 
 namespace Exercicio04_Pagamentos;
 
-public class CartaoCredito
+public class CartaoCredito : Pagamento, IComprovante
 {
+    public CartaoCredito(double valor) : base(valor)
+    {
+    }
 
+    public override void ProcessarPagamento()
+    {
+        Console.WriteLine($"Processando pagamento de R$ {Valor:F2} no Cartão de Crédito.");
+    }
+
+    public void EmitirComprovante()
+    {
+        Console.WriteLine($"Comprovante: Pagamento de R$ {Valor:F2} realizado no Cartão de Crédito.");
+    }
+}
+
+
+-------------------- Arquivo: Models/Pix.cs --------------------
+
+namespace Exercicio04_Pagamentos;
+
+public class Pix : Pagamento, IComprovante
+{
+    public Pix(double valor) : base(valor)
+    {
+    }
+
+    public override void ProcessarPagamento()
+    {
+        Console.WriteLine($"Processando pagamento de R$ {Valor:F2} via Pix.");
+    }
+
+    public void EmitirComprovante()
+    {
+        Console.WriteLine($"Comprovante: Pagamento de R$ {Valor:F2} realizado via Pix.");
+    }
 }
 
 
 -------------------- Arquivo: Program.cs --------------------
 
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using Exercicio04_Pagamentos;
+
+CartaoCredito cartao = new CartaoCredito(150.00);
+Pix pix = new Pix(89.90);
+
+List<Pagamento> pagamentos = new List<Pagamento>();
+pagamentos.Add(cartao);
+pagamentos.Add(pix);
+
+foreach (Pagamento p in pagamentos)
+{
+    p.ProcessarPagamento();
+
+    if (p is IComprovante comprovante)
+    {
+        comprovante.EmitirComprovante();
+    }
+
+    Console.WriteLine();
+}

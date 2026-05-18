@@ -1,6 +1,6 @@
 ﻿namespace Exercicio03_Biblioteca;
 
-public class IEmprestimo
+public interface IEmprestimo
 {
-
+    void Emprestar();
 }

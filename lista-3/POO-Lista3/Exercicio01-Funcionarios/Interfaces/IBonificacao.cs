@@ -1,6 +1,6 @@
 ﻿namespace Exercicio01_Funcionarios;
 
-interface IBonificacao
+public interface IBonificacao
 {
     double CalcularBonus();
 }

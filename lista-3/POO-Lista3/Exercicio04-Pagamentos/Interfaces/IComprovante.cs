@@ -1,6 +1,6 @@
 ﻿namespace Exercicio04_Pagamentos;
 
-public class IComprovante
+public interface IComprovante
 {
-
+    void EmitirComprovante();
 }
