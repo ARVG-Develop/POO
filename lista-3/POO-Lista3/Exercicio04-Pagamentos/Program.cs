@@ -7,6 +7,8 @@ List<Pagamento> pagamentos = new List<Pagamento>();
 pagamentos.Add(cartao);
 pagamentos.Add(pix);
 
+Console.WriteLine("=== PAGAMENTOS ===\n");
+
 foreach (Pagamento p in pagamentos)
 {
     p.ProcessarPagamento();

@@ -8,11 +8,13 @@ public class Gerente : Funcionario, IBonificacao
 
     public override double CalcularSalario()
     {
-        return SalarioBase + CalcularBonus();
+        Console.WriteLine("Estou no método CalcularSalario da classe Gerente");
+        return 0;
     }
 
     public double CalcularBonus()
     {
-        return SalarioBase * 0.30;
+        Console.WriteLine("Estou no método CalcularBonus da classe Gerente");
+        return 0;
     }
 }

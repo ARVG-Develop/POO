@@ -8,11 +8,11 @@ public class Livro : ItemBiblioteca, IEmprestimo
 
     public override void ExibirDetalhes()
     {
-        Console.WriteLine($"Livro: {Titulo}, Ano: {Ano}");
+        Console.WriteLine("Estou no método ExibirDetalhes da classe Livro");
     }
 
     public void Emprestar()
     {
-        Console.WriteLine($"O livro \"{Titulo}\" foi emprestado.");
+        Console.WriteLine("Estou no método Emprestar da classe Livro");
     }
 }

@@ -8,11 +8,11 @@ public class Pix : Pagamento, IComprovante
 
     public override void ProcessarPagamento()
     {
-        Console.WriteLine($"Processando pagamento de R$ {Valor:F2} via Pix.");
+        Console.WriteLine("Estou no método ProcessarPagamento da classe Pix");
     }
 
     public void EmitirComprovante()
     {
-        Console.WriteLine($"Comprovante: Pagamento de R$ {Valor:F2} realizado via Pix.");
+        Console.WriteLine("Estou no método EmitirComprovante da classe Pix");
     }
 }

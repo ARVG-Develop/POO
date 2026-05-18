@@ -8,11 +8,11 @@ public class Revista : ItemBiblioteca, IEmprestimo
 
     public override void ExibirDetalhes()
     {
-        Console.WriteLine($"Revista: {Titulo}, Ano: {Ano}");
+        Console.WriteLine("Estou no método ExibirDetalhes da classe Revista");
     }
 
     public void Emprestar()
     {
-        Console.WriteLine($"A revista \"{Titulo}\" foi emprestada.");
+        Console.WriteLine("Estou no método Emprestar da classe Revista");
     }
 }

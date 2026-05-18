@@ -8,11 +8,13 @@ public class Desenvolvedor : Funcionario, IBonificacao
 
     public override double CalcularSalario()
     {
-        return SalarioBase + CalcularBonus();
+        Console.WriteLine("Estou no método CalcularSalario da classe Desenvolvedor");
+        return 0;
     }
 
     public double CalcularBonus()
     {
-        return SalarioBase * 0.20;
+        Console.WriteLine("Estou no método CalcularBonus da classe Desenvolvedor");
+        return 0;
     }
 }

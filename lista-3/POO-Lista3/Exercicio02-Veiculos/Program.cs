@@ -3,10 +3,10 @@
 List<Veiculo> veiculos = new()
 {
     new Carro("Toyota", "Corolla"),
-    new Carro("Honda", "Civic"),
-    new Moto("Yamaha", "MT-07"),
-    new Moto("Honda", "CB 500")
+    new Moto("Yamaha", "MT-07")
 };
+
+Console.WriteLine("=== VEÍCULOS ===\n");
 
 foreach (var v in veiculos)
 {

@@ -44,12 +44,14 @@ public class Gerente : Funcionario, IBonificacao
 
     public override double CalcularSalario()
     {
-        return SalarioBase + CalcularBonus();
+        Console.WriteLine("Estou no método CalcularSalario da classe Gerente");
+        return 0;
     }
 
     public double CalcularBonus()
     {
-        return SalarioBase * 0.30;
+        Console.WriteLine("Estou no método CalcularBonus da classe Gerente");
+        return 0;
     }
 }
 
@@ -66,12 +68,14 @@ public class Desenvolvedor : Funcionario, IBonificacao
 
     public override double CalcularSalario()
     {
-        return SalarioBase + CalcularBonus();
+        Console.WriteLine("Estou no método CalcularSalario da classe Desenvolvedor");
+        return 0;
     }
 
     public double CalcularBonus()
     {
-        return SalarioBase * 0.20;
+        Console.WriteLine("Estou no método CalcularBonus da classe Desenvolvedor");
+        return 0;
     }
 }
 
@@ -81,30 +85,22 @@ public class Desenvolvedor : Funcionario, IBonificacao
 using Exercicio01_Funcionarios;
 
 Gerente g1 = new Gerente("Carlos Silva", 5000.00);
-Gerente g2 = new Gerente("Ana Souza", 6000.00);
 Desenvolvedor d1 = new Desenvolvedor("João Lima", 4000.00);
-Desenvolvedor d2 = new Desenvolvedor("Maria Oliveira", 4500.00);
 
 List<Funcionario> funcionarios = new List<Funcionario>();
 funcionarios.Add(g1);
-funcionarios.Add(g2);
 funcionarios.Add(d1);
-funcionarios.Add(d2);
 
-Console.WriteLine("      RELATÓRIO DE FUNCIONÁRIOS         \n");
+Console.WriteLine("=== RELATÓRIO DE FUNCIONÁRIOS ===\n");
 
 foreach (Funcionario f in funcionarios)
 {
     Console.WriteLine($"--- Funcionário: {f.Nome} ---");
-
-    double salario = f.CalcularSalario();
+    f.CalcularSalario();
 
     if (f is IBonificacao bonificado)
     {
-        double bonus = bonificado.CalcularBonus();
-        Console.WriteLine($"Nome:          {f.Nome}");
-        Console.WriteLine($"Salário Final: R$ {salario:F2}");
-        Console.WriteLine($"Bônus:         R$ {bonus:F2}");
+        bonificado.CalcularBonus();
     }
 
     Console.WriteLine();
@@ -158,12 +154,13 @@ public class Carro : Veiculo, IManutencao
 
     public override string ExibirInformacoes()
     {
-        return $"Carro - Marca: {Marca}, Modelo: {Modelo}";
+        Console.WriteLine("Estou no método ExibirInformacoes da classe Carro");
+        return "";
     }
 
     public void RealizarManutencao()
     {
-        Console.WriteLine($"Manutenção do carro {Marca} {Modelo} realizada.");
+        Console.WriteLine("Estou no método RealizarManutencao da classe Carro");
     }
 }
 
@@ -180,12 +177,13 @@ public class Moto : Veiculo, IManutencao
 
     public override string ExibirInformacoes()
     {
-        return $"Moto - Marca: {Marca}, Modelo: {Modelo}";
+        Console.WriteLine("Estou no método ExibirInformacoes da classe Moto");
+        return "";
     }
 
     public void RealizarManutencao()
     {
-        Console.WriteLine($"Manutenção da moto {Marca} {Modelo} realizada.");
+        Console.WriteLine("Estou no método RealizarManutencao da classe Moto");
     }
 }
 
@@ -197,10 +195,10 @@ using Exercicio02_Veiculos;
 List<Veiculo> veiculos = new()
 {
     new Carro("Toyota", "Corolla"),
-    new Carro("Honda", "Civic"),
-    new Moto("Yamaha", "MT-07"),
-    new Moto("Honda", "CB 500")
+    new Moto("Yamaha", "MT-07")
 };
+
+Console.WriteLine("=== VEÍCULOS ===\n");
 
 foreach (var v in veiculos)
 {
@@ -262,12 +260,12 @@ public class Livro : ItemBiblioteca, IEmprestimo
 
     public override void ExibirDetalhes()
     {
-        Console.WriteLine($"Livro: {Titulo}, Ano: {Ano}");
+        Console.WriteLine("Estou no método ExibirDetalhes da classe Livro");
     }
 
     public void Emprestar()
     {
-        Console.WriteLine($"O livro \"{Titulo}\" foi emprestado.");
+        Console.WriteLine("Estou no método Emprestar da classe Livro");
     }
 }
 
@@ -284,12 +282,12 @@ public class Revista : ItemBiblioteca, IEmprestimo
 
     public override void ExibirDetalhes()
     {
-        Console.WriteLine($"Revista: {Titulo}, Ano: {Ano}");
+        Console.WriteLine("Estou no método ExibirDetalhes da classe Revista");
     }
 
     public void Emprestar()
     {
-        Console.WriteLine($"A revista \"{Titulo}\" foi emprestada.");
+        Console.WriteLine("Estou no método Emprestar da classe Revista");
     }
 }
 
@@ -304,6 +302,8 @@ Revista revista = new Revista("Super Interessante", 2023);
 List<ItemBiblioteca> acervo = new List<ItemBiblioteca>();
 acervo.Add(livro);
 acervo.Add(revista);
+
+Console.WriteLine("=== BIBLIOTECA ===\n");
 
 foreach (ItemBiblioteca item in acervo)
 {
@@ -363,12 +363,12 @@ public class CartaoCredito : Pagamento, IComprovante
 
     public override void ProcessarPagamento()
     {
-        Console.WriteLine($"Processando pagamento de R$ {Valor:F2} no Cartão de Crédito.");
+        Console.WriteLine("Estou no método ProcessarPagamento da classe CartaoCredito");
     }
 
     public void EmitirComprovante()
     {
-        Console.WriteLine($"Comprovante: Pagamento de R$ {Valor:F2} realizado no Cartão de Crédito.");
+        Console.WriteLine("Estou no método EmitirComprovante da classe CartaoCredito");
     }
 }
 
@@ -385,12 +385,12 @@ public class Pix : Pagamento, IComprovante
 
     public override void ProcessarPagamento()
     {
-        Console.WriteLine($"Processando pagamento de R$ {Valor:F2} via Pix.");
+        Console.WriteLine("Estou no método ProcessarPagamento da classe Pix");
     }
 
     public void EmitirComprovante()
     {
-        Console.WriteLine($"Comprovante: Pagamento de R$ {Valor:F2} realizado via Pix.");
+        Console.WriteLine("Estou no método EmitirComprovante da classe Pix");
     }
 }
 
@@ -405,6 +405,8 @@ Pix pix = new Pix(89.90);
 List<Pagamento> pagamentos = new List<Pagamento>();
 pagamentos.Add(cartao);
 pagamentos.Add(pix);
+
+Console.WriteLine("=== PAGAMENTOS ===\n");
 
 foreach (Pagamento p in pagamentos)
 {

@@ -8,11 +8,11 @@ public class CartaoCredito : Pagamento, IComprovante
 
     public override void ProcessarPagamento()
     {
-        Console.WriteLine($"Processando pagamento de R$ {Valor:F2} no Cartão de Crédito.");
+        Console.WriteLine("Estou no método ProcessarPagamento da classe CartaoCredito");
     }
 
     public void EmitirComprovante()
     {
-        Console.WriteLine($"Comprovante: Pagamento de R$ {Valor:F2} realizado no Cartão de Crédito.");
+        Console.WriteLine("Estou no método EmitirComprovante da classe CartaoCredito");
     }
 }

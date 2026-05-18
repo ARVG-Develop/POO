@@ -8,11 +8,12 @@ public class Moto : Veiculo, IManutencao
 
     public override string ExibirInformacoes()
     {
-        return $"Moto - Marca: {Marca}, Modelo: {Modelo}";
+        Console.WriteLine("Estou no método ExibirInformacoes da classe Moto");
+        return "";
     }
 
     public void RealizarManutencao()
     {
-        Console.WriteLine($"Manutenção da moto {Marca} {Modelo} realizada.");
+        Console.WriteLine("Estou no método RealizarManutencao da classe Moto");
     }
 }
