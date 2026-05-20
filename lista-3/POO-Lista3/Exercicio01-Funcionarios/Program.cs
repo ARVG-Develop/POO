@@ -8,7 +8,7 @@ funcionarios.Add(g1);
 funcionarios.Add(d1);
 
 Console.WriteLine("=== RELATÓRIO DE FUNCIONÁRIOS ===\n");
-Console.WriteLine("=== RELATÓRIO DE FUNCIONÁRIOS ===\n");
+
 foreach (Funcionario f in funcionarios)
 {
     Console.WriteLine($"--- Funcionário: {f.Nome} ---");
