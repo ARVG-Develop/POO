@@ -8,24 +8,31 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/Ale/.nuget/packages/": {}
+    "C:\\Users\\1579017\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/Exercicio02-Veiculos.csproj",
+      "projectUniqueName": "C:\\Users\\1579017\\Desktop\\POO\\lista-3\\POO-Lista3\\Exercicio02-Veiculos\\Exercicio02-Veiculos.csproj",
       "projectName": "Exercicio02-Veiculos",
-      "projectPath": "/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/Exercicio02-Veiculos.csproj",
-      "packagesPath": "/home/Ale/.nuget/packages/",
-      "outputPath": "/home/Ale/projects/PUCMINAS/POO/lista-3/POO-Lista3/Exercicio02-Veiculos/obj/",
+      "projectPath": "C:\\Users\\1579017\\Desktop\\POO\\lista-3\\POO-Lista3\\Exercicio02-Veiculos\\Exercicio02-Veiculos.csproj",
+      "packagesPath": "C:\\Users\\1579017\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\1579017\\Desktop\\POO\\lista-3\\POO-Lista3\\Exercicio02-Veiculos\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/Ale/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\1579017\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -38,7 +45,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -59,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.126/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
