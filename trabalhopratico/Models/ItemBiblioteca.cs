@@ -2,7 +2,7 @@ using System;
 
 namespace SistemaBiblioteca.Models
 {
-    // Classe abstrata independente
+    // Classe base para qualquer item que possa ser emprestado na biblioteca
     public abstract class ItemBiblioteca
     {
         private int _id;
