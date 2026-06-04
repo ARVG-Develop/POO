@@ -2,7 +2,7 @@ using System;
 
 namespace SistemaBiblioteca.Models
 {
-    // NÍVEL 1 da hierarquia - Classe abstrata base
+    // Classe base para todas as pessoas do sistema (alunos e funcionários)
     public abstract class Pessoa
     {
         private int _id;

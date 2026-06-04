@@ -2,7 +2,7 @@ using System;
 
 namespace SistemaBiblioteca.Models
 {
-    // NÍVEL 3 da hierarquia
+    // Funcionário herda de Usuario, adicionando dados profissionais
     public class Funcionario : Usuario
     {
         private string _matricula;

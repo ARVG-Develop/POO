@@ -53,17 +53,23 @@ namespace SistemaBiblioteca.Utils
             }
         }
 
+        // Lê uma data pedindo dia, mês e ano separadamente
         public static DateTime LerData(string mensagem)
         {
+            Console.WriteLine(mensagem);
             while (true)
             {
-                Console.Write(mensagem);
-                string entrada = Console.ReadLine();
-                if (DateTime.TryParseExact(entrada, "dd/MM/yyyy",
-                    System.Globalization.CultureInfo.InvariantCulture,
-                    System.Globalization.DateTimeStyles.None, out DateTime data))
-                    return data;
-                Console.WriteLine("  [!] Data inválida. Use o formato dd/MM/yyyy.");
+                int dia = LerInteiro("    Dia  : ", 1, 31);
+                int mes = LerInteiro("    Mes  : ", 1, 12);
+                int ano = LerInteiro("    Ano  : ", 1900, DateTime.Now.Year);
+                try
+                {
+                    return new DateTime(ano, mes, dia);
+                }
+                catch
+                {
+                    Console.WriteLine("  [!] Data invalida. Verifique o dia, mes e ano informados.");
+                }
             }
         }
 
@@ -108,30 +114,22 @@ namespace SistemaBiblioteca.Utils
 
         public static void ExibirSucesso(string mensagem)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"\n  [✓] {mensagem}");
-            Console.ResetColor();
+            Console.WriteLine($"\n  [OK] {mensagem}");
         }
 
         public static void ExibirErro(string mensagem)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"\n  [✗] ERRO: {mensagem}");
-            Console.ResetColor();
+            Console.WriteLine($"\n  [ERRO] {mensagem}");
         }
 
         public static void ExibirAviso(string mensagem)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"\n  [!] AVISO: {mensagem}");
-            Console.ResetColor();
+            Console.WriteLine($"\n  [AVISO] {mensagem}");
         }
 
         public static void ExibirInfo(string mensagem)
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"  [i] {mensagem}");
-            Console.ResetColor();
+            Console.WriteLine($"  [INFO] {mensagem}");
         }
     }
 }

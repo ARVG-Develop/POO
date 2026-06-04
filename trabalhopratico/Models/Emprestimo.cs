@@ -24,7 +24,6 @@ namespace SistemaBiblioteca.Models
         public DateTime? DataDevolucaoReal { get; set; }
         public StatusEmprestimo Status { get; set; }
         public int NumeroRenovacoes { get; set; }
-        public string ObservacoesFuncionario { get; set; }
         public const int MaxRenovacoes = 2;
 
         public bool Atrasado => Status == StatusEmprestimo.Ativo &&
