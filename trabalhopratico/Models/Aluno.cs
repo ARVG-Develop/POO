@@ -2,7 +2,7 @@ using System;
 
 namespace SistemaBiblioteca.Models
 {
-    // NÍVEL 2 (outro ramo) - herda de Pessoa
+    // Aluno herda de Pessoa diretamente, pois não é um usuário do sistema administrativo
     public class Aluno : Pessoa
     {
         private string _matricula;

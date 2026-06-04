@@ -2,7 +2,7 @@ using System;
 
 namespace SistemaBiblioteca.Models
 {
-    // NÍVEL 2 da hierarquia
+    // Representa um usuário do sistema, herda os dados básicos de Pessoa
     public class Usuario : Pessoa
     {
         private string _email;

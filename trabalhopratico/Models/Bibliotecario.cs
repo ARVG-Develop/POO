@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SistemaBiblioteca.Models
 {
-    // NÍVEL 4 da hierarquia
+    // Bibliotecário é um tipo especial de funcionário, com registro profissional (CRB) e especialidades
     public class Bibliotecario : Funcionario
     {
         public string Crb { get; set; }  
